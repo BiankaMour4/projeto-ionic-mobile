@@ -1,0 +1,229 @@
+
+ion-header {
+  ion-toolbar {
+    --background: #080d09;
+    --color: #ffffff;
+    padding: 8px 16px;
+
+    ion-title {
+      font-size: 20px;
+      font-weight: 800;
+      letter-spacing: 1px;
+
+      span {
+        color: #b5ed45;
+      }
+    }
+  }
+}
+
+ion-content {
+  --background: #080d09;
+}
+
+.page-body {
+  padding: 24px 20px 32px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.subtitulo {
+  color: #b5ed45;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+
+.boas-vindas {
+  margin-bottom: 24px;
+
+  h1 {
+    color: #ffffff;
+    font-size: 28px;
+    font-weight: 800;
+    margin: 0 0 8px;
+  }
+
+  p:last-child {
+    color: #a4ada5;
+    font-size: 14px;
+  }
+}
+
+/* BANNER */
+.banner {
+  min-height: 260px;
+  border-radius: 24px;
+  padding: 28px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+
+  background:
+    linear-gradient(90deg, rgba(5, 12, 7, 0.95), rgba(5, 12, 7, 0.25)),
+    url('/assets/images/banner.jpeg');
+
+  background-size: cover;
+  background-position: center 0%;
+  background-repeat: no-repeat;
+
+  border: 1px solid #293b27;
+  margin-bottom: 24px;
+}
+
+.banner-conteudo {
+  position: relative;
+  z-index: 1;
+
+  span {
+    color: #b5ed45;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 2px;
+  }
+
+  h2 {
+    color: #ffffff;
+    font-size: 29px;
+    font-weight: 900;
+    line-height: 1.1;
+    margin: 12px 0;
+  }
+
+  p {
+    color: #e0e7df;
+    font-size: 13px;
+    line-height: 1.5;
+  }
+}
+
+/* PRÓXIMA AULA */
+.proxima-aula {
+  background: linear-gradient(135deg, #17231a, #101a13);
+  border: 1px solid #2b3b2e;
+  border-radius: 22px;
+  padding: 22px;
+  margin-bottom: 18px;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: 12px;
+}
+
+.aula-topo .subtitulo {
+  margin-bottom: 12px;
+}
+
+.proxima-aula h2 {
+  color: #ffffff;
+  font-size: 21px;
+  font-weight: 800;
+  margin: 0;
+}
+
+.horario {
+  background: #b6f23b;
+  color: #101510;
+  padding: 12px 18px;
+  border-radius: 30px;
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.aula-data {
+  grid-column: 1 / -1;
+  border-top: 1px solid #303c32;
+  padding-top: 14px;
+  color: #a4ada5;
+  font-size: 14px;
+}
+
+/* SESSÕES */
+.indicador-sessoes {
+  background: #111a13;
+  border: 1px solid #293b27;
+  border-radius: 20px;
+  padding: 20px;
+  margin-bottom: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  p {
+    color: #a4ada5;
+    margin: 0;
+  }
+
+  strong {
+    color: #b5ed45;
+    font-size: 30px;
+  }
+
+  small {
+    color: #a4ada5;
+  }
+}
+
+/* ACESSO RÁPIDO */
+.atalhos {
+  margin-top: 26px;
+}
+
+.atalhos-lista {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.atalho {
+  --background: #111a13;
+  --color: #ffffff;
+  --border-radius: 16px;
+  --border-color: #293b27;
+  --border-style: solid;
+  --border-width: 1px;
+  height: 65px;
+  margin: 0;
+
+  ion-icon {
+    color: #b5ed45;
+    font-size: 20px;
+    margin-right: 8px;
+  }
+
+  span {
+    font-size: 13px;
+    font-weight: 700;
+  }
+}
+
+/* TELAS MENORES */
+@media (max-width: 380px) {
+  .page-body {
+    padding: 18px 14px 28px;
+  }
+
+  .banner {
+    min-height: 230px;
+    padding: 20px;
+  }
+
+  .banner-conteudo h2 {
+    font-size: 25px;
+  }
+
+  .proxima-aula {
+    padding: 16px;
+  }
+
+  .proxima-aula h2 {
+    font-size: 17px;
+  }
+
+  .horario {
+    font-size: 17px;
+    padding: 10px 13px;
+  }
+}

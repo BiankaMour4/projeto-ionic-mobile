@@ -1,17 +1,82 @@
-<!-- Fácil | Bianka | Monte aqui o banner, os atalhos e o horário da próxima aula. -->
+
 <ion-header class="ion-no-border">
   <ion-toolbar>
-    <ion-title>Início</ion-title>
+    <ion-title>RITMO <span>FIT.</span></ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
   <main class="page-body">
-    <p class="surface-card">Ritmo Fit</p>
-    <section class="surface-card indicador-sessoes">
+
+    <!-- Saudação -->
+    <section class="boas-vindas">
+      <p class="subtitulo">SUA ROTINA</p>
+      <h1>Olá, Bianka.</h1>
+      <p>Acompanhe seus treinos, aulas e atividades.</p>
+    </section>
+
+    <!-- Banner principal -->
+    <section class="banner">
+      <div class="banner-conteudo">
+        <span>SEU ESPAÇO</span>
+        <h2>Movimento<br>que transforma.</h2>
+        <p>Cuide do seu corpo,<br>evolua sempre.</p>
+      </div>
+    </section>
+
+    <!-- Próxima aula -->
+    <section class="proxima-aula">
+      <div class="aula-topo">
+        <p class="subtitulo">PRÓXIMA AULA</p>
+        <h2>{{ nomeAula }}</h2>
+      </div>
+
+      <div class="horario">
+        {{ proximaAula ? (proximaAula | date:'HH:mm') : '--:--' }}
+      </div>
+
+      <div class="aula-data">
+        {{ proximaAula ? (proximaAula | date:'dd/MM/yyyy') : 'Nenhuma aula programada' }}
+      </div>
+    </section>
+
+    <!-- Indicador de sessões -->
+    <section class="indicador-sessoes surface-card">
       <p>Sessões restantes</p>
       <strong>{{ sessoesRestantes | number:'2.0-0' }}</strong>
-      <small>Média semanal: {{ mediaSemanal | number:'1.1-1' }} treinos</small>
+      <small>
+        Média semanal: {{ mediaSemanal | number:'1.1-1' }} treinos
+      </small>
     </section>
+
+    <!-- Atalhos -->
+    <section class="atalhos">
+      <p class="subtitulo">ACESSO RÁPIDO</p>
+
+      <div class="atalhos-lista">
+
+        <ion-button class="atalho" fill="clear" routerLink="/treinos">
+          <ion-icon name="barbell-outline"></ion-icon>
+          <span>Treinos</span>
+        </ion-button>
+
+        <ion-button class="atalho" fill="clear" routerLink="/grade">
+          <ion-icon name="calendar-outline"></ion-icon>
+          <span>Grade</span>
+        </ion-button>
+
+        <ion-button class="atalho" fill="clear" routerLink="/timeline">
+          <ion-icon name="newspaper-outline"></ion-icon>
+          <span>Timeline</span>
+        </ion-button>
+
+        <ion-button class="atalho" fill="clear" routerLink="/perfil">
+          <ion-icon name="person-outline"></ion-icon>
+          <span>Perfil</span>
+        </ion-button>
+
+      </div>
+    </section>
+
   </main>
 </ion-content>
